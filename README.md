@@ -36,6 +36,20 @@ A python script that locks your laptop/pc screen if you forget to lock it .. usi
 
 install the above libraries using the following command : pip.exe install [library name]  
 
+!! If you face a problem installing Crypto Just install the following libaray instead: [pycryptodome] !!
+
+NOTE: 
+
+While trying to install the libraries: 
+
+Please delete the following code block from OfC.py
+
+hwnd = ctypes.windll.kernel32.GetConsoleWindow()      
+if hwnd != 0:      
+    ctypes.windll.user32.ShowWindow(hwnd, 0)      
+    ctypes.windll.kernel32.CloseHandle(hwnd)
+    _, pid = win32process.GetWindowThreadProcessId(hwnd)
+
 ----
 
 * Python version?  
