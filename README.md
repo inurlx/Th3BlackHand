@@ -1,7 +1,7 @@
 # Th3BlackHand
 
 <p align="center">
-  <img src="https://i.ibb.co/NZzvpfY/logo.jpg" />
+  <img src="https://media.giphy.com/media/LLxAlFgptpskFCxyor/giphy.gif" />
 </p>
 
 A python script that locks your laptop/pc screen if you forget to lock it .. using Firebase ! - useful if you work/live around nosy people :D
