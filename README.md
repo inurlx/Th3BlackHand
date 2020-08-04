@@ -36,7 +36,6 @@ A python script that locks your laptop/pc screen if you forget to lock it .. usi
 > os  
 > socket  
 > time  
-> win32process  
 > ctypes  
 
 install the above libraries using the following command : pip.exe install [library name]  
@@ -47,13 +46,12 @@ NOTE:
 
 While trying to install the libraries: 
 
-Please delete the following code block from OfC.py
+Please delete the following code block from Th3BlackHand.py
 
-hwnd = ctypes.windll.kernel32.GetConsoleWindow()      
-if hwnd != 0:      
-    ctypes.windll.user32.ShowWindow(hwnd, 0)      
-    ctypes.windll.kernel32.CloseHandle(hwnd)
-    _, pid = win32process.GetWindowThreadProcessId(hwnd)
+CMD = ctypes.windll.kernel32.GetConsoleWindow()      
+if CMD != 0:      
+    ctypes.windll.user32.ShowWindow(CMD, 0)      
+    ctypes.windll.kernel32.CloseHandle(CMD)
 
 ----
 
@@ -65,11 +63,11 @@ if hwnd != 0:
 
 * How to install the tool?    
 
-> 1. Download OfC.py   
+> 1. Download Th3BlackHand.py   
 > 2. Modify the code with your Laptop paths such as the python3 compiler path.  
 > 3. Modify the link of firebase realtime database with yours !  
 > 4. Import 'test-ed516-export.json' to your firebase realtime database .. just to save you some time :)  
-> 5. Run OfC.py using the Python3 Compiler!! <make sure to install the libraries above FIRST!>  
+> 5. Run Th3BlackHand.py using the Python3 Compiler!! <make sure to install the libraries above FIRST!>  
 
 ---
 
