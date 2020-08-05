@@ -4,7 +4,7 @@
   <img src="https://media.giphy.com/media/LLxAlFgptpskFCxyor/giphy.gif" />
 </p>
 
-A python script that locks your laptop/pc screen if you forget to lock it .. using Firebase ! - useful if you work/live around nosy people :D
+A python script that locks your laptop/pc screen if you forget to lock it .. using either an android application or web browser to change the value in the firebase ! - useful if you work/live around nosy people !
 
 
 
@@ -13,9 +13,11 @@ A python script that locks your laptop/pc screen if you forget to lock it .. usi
 * As you can see in the above GIF, the tool keeps locking the screen, this happens because the value in the firebase realtime database is changed to False .. When you are not around your laptop/pc just change the value in the database to False using your mobile phone ;) 
 
 --- 
-![Alt text](https://i.imgur.com/UyF8a6W.jpg "Firebase Realtime Database from phone")
+<img src="https://i.ibb.co/5Kts11C/android-1.jpg" width="150"> <img src="https://i.ibb.co/TMdBYhM/android-2.jpg" width="150"> <img src="https://i.ibb.co/swKCDJd/android-3.jpg" width="150">
 
-* Firebase Realtime Database from a mobile phone browser :)  
+
+* You can fine the android project in the [Releases](https://github.com/inurlx/Th3BlackHand/releases)  
+* Unfortunately you gotta modify the android project with your settings and build it, to get the APK FILE :) 
 ---
 
 * Why should you use this tool?  
@@ -70,7 +72,21 @@ if CMD != 0:
 > 5. Run Th3BlackHand.py using the Python3 Compiler!! <make sure to install the libraries above FIRST!>  
 
 ---
+---
+* Firebase Realtime Database Rules  
+{  
+  "rules": {  
+    ".read": true,  
+    ".write": "auth.uid === 'Your Account ID here'"  
+  }  
+}  
 
+---
+* Credits: 
+> The Font-end / user interfaces were designed and coded by:
+>> Osamah Saeed - https://github.com/OsDroidi
+
+---
 * Stuck on something? 
 
 > open a new issue ;)
