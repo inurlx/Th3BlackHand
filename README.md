@@ -4,7 +4,7 @@
   <img src="https://media.giphy.com/media/LLxAlFgptpskFCxyor/giphy.gif" />
 </p>
 
-What is Th3BlackHand?
+What is Th3BlackHand?  
 A python script that locks your laptop/pc screen if you forget to lock it, using an android application that is connected to the firebase database. This tool can be useful if you work/live with nosy people 😅!  
 
 
