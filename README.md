@@ -4,8 +4,8 @@
   <img src="https://media.giphy.com/media/LLxAlFgptpskFCxyor/giphy.gif" />
 </p>
 
-A python script that locks your laptop/pc screen if you forget to lock it .. using either an android application or web browser to change the value in the firebase ! - useful if you work/live around nosy people !
-
+What is Th3BlackHand?
+A python script that locks your laptop/pc screen if you forget to lock it, using an android application that is connected to the firebase database. This tool can be useful if you work/live with nosy people 😅!  
 
 
 ![Demo](https://media.giphy.com/media/TEcWMqTQqdBkKsbuZf/giphy.gif)
